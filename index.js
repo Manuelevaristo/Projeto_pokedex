@@ -2,7 +2,7 @@ const path = require("path");
 
 const express = require("express");
 const app = express();
-const port = 3000; // Const para armanezar a porta do servidor
+const port = process.env.PORT || 3000; // Const para armanezar a porta do servidor
 app.set("view engine", "ejs");
 // Substituição de function por arrow function
 app.use(express.static(path.join(__dirname, "public")));
