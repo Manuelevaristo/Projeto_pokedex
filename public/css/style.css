@@ -50,8 +50,9 @@ ul a:hover{
 }
 body{
    
+    height: 100%;
     font-family:"Trebuchet Ms", Helvetica, sans-serif;
-    background: #f2f2f2;
+    background: rgb(207, 76, 10);
 }
 header div{
     width: 100%;
@@ -257,6 +258,8 @@ section#message {
    display: flex;
    justify-content: center;
     height: 20px;
+    width: 100%;
+    
     /* text-align: center; */
     background:rgb(243, 194, 144);
     padding: 1rem;
@@ -269,6 +272,7 @@ div#footer p{
     color:rgb(207, 76, 10);
     padding: 0.1rem;
     font-size: 12px;
+
 }
 
 
