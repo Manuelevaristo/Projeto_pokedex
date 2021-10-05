@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,46 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Pokedex</title>
 </head>
-<body>
-    <h1><%= titulo %></h1>
+<body id="home">
+    <div >
+        <header>
+            <nav>
+                <article>
+                <img src="/img/logo.png" alt="">
+                <h1><a id="titulo" href="/">Pokédex</a></h1>
+                </article>
+                <ul id="navegacao">
+                    
+                    <li><a href="/cadastro">Cadastro</a></li>
+                    <li> <a href="/">Home</a></li>
+                </ul>
+            </nav>
+        
+            <% if(message != "") {  %>
+                <section id="message">
+                    <p><%= message %></p> <span id="close">&times;</span>
+                </section>
+            <% }  %>
+            <div><h1>Pokédex</h1></div>
+        </header>  
+        <main id="principal">
+            
+            <section id="pokedex">
+                <% pokedex.forEach((item, index)=> { %>
+                    <a class="card" href="/detalhes/<%= index %>">
+                        <img src="<%= item.imagem %>" alt="">
+                        <h2>
+                            <%= item.nome %>
+                        </h2>
+                        <h4>
+                            <%= item.tipo %>
+                        </h4>
+                    </a>
+                    <% }) %>
+            </section>
+
+        </main>
+    </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>
